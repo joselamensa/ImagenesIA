@@ -57,21 +57,3 @@ function removeSpinner() {
 }
 
 document.querySelector("#image-form").addEventListener("submit", onSubmit);
-
-var clock = document.createElement("div");
-clock.style.fontSize = "50px";
-clock.style.fontFamily = "monospace";
-clock.style.color = "#FFFFFF";
-clock.style.position = "absolute";
-clock.style.left = "50%";
-clock.style.top = "50%";
-clock.style.transform = "translate(-50%, -50%)";
-document.body.appendChild(clock);
-function updateClock() {
-  var now = new Date();
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
-  clock.innerHTML = hours + ":" + minutes + ":" + seconds;
-}
-setInterval(updateClock, 1000);
